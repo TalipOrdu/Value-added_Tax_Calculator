@@ -2,4 +2,4 @@
 I made a Value-added tax calculator using with html, css, javascript.
 
 ## [DEMO LINK](https://valueaddedtaxcalculator.netlify.app/)
-![ss1](https://user-images.githubusercontent.com/80225142/221382112-3c8e79e5-8ec9-4d42-93e7-b2558057bbd9.png)
+![ss3](https://user-images.githubusercontent.com/80225142/221441997-054d9f8a-e6b2-40a7-b121-916e3f054506.png)
