@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="alisdijital-logo_v-1.svg">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KDV Hesaplama</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <nav class="navbar" id="navbar">
+            <div class="logo">
+                <img src="alisdijital-logo_v-1.svg" alt="logo">
+
+                <ul>
+                    <li><a href="https://www.alisdijital.com/">Ana Sayfa</a></li>
+                    <li><a href="https://www.alisdijital.com/hizmetlerimiz/">Hizmetlerimiz</a></li>
+                    <li><a href="https://www.alisdijital.com/projelerimiz/">Projeler</a></li>
+                    <li><a href="https://www.alisdijital.com/dijital-pazarlama-icerik-kosesi/">İçerik Köşesi</a></li>
+                    <li><a href="https://www.alisdijital.com/iletisim/">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="links">
+                <a href="https://www.facebook.com/alisdijital">
+                    <ion-icon name="logo-facebook" class="icon"></ion-icon>
+                </a>
+                <a href="https://www.instagram.com/alisdijital/">
+                    <ion-icon name="logo-instagram" class="icon"></ion-icon>
+                </a>
+                <a href="https://www.linkedin.com/company/alisdijital/">
+                    <ion-icon name="logo-linkedin" class="icon"></ion-icon>
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <div class="area">
+            <h1>KDV Hesaplama</h1>
+            <p>Katma değer vergisini en kolay şekilde hesaplayabilmeniz için aşağıdaki KDV hesaplama aracını
+                kullanabilirsiniz.</p>
+            <form id="valueForm">
+                <fieldset class="form">
+                    <input type="radio" id="notincludeKDV" value="1" name="KDV" onclick="handleClick(this);"> 
+                    <label name="haric">KDV Hariç Tutardan KDV Dahil Tutar Hesapla</label> <br>
+                    <input type="radio" id="includeKDV" value="2" name="KDV" onclick="handleClick(this);" checked><label
+                        name="dahil">KDV Dahil Tutardan KDV Hariç Tutar Hesapla</label> <br>
+
+                    <div class="amount">
+                        <label name="amount">Tutar <span>*</span></label>
+                        <input type="number" class="currency-field" id="currency-field" value="" min="0"
+                            data-type="currency" placeholder="0.00" required> <br>
+
+                    </div>
+                    <div class="percent">
+                        <label name="percent">KDV Yüzdesi <span>*</span></label>
+                        <input type="number" name="percent" id="percent" placeholder="%1" min="0" max="100" required> <br>
+                    </div>
+
+                    <div class="buttons">
+                        <button type="submit" class="submit">Hesapla</button>
+                        <button type="reset" id="reset" class="reset">Reset</button>
+                    </div>
+
+
+                </fieldset>
+                <h2>Hesaplama Sonucu</h2>
+                <hr>
+                <div class="result">
+                    <p class="amountResult"></p>
+                    <p class="percentResult"></p>
+                    <p class="totalResult"></p>
+                </div>
+            </form>
+        </div>
+        <footer>
+            <div>
+                <img src="https://www.alisdijital.com/wp-content/uploads/2022/07/alisdijital-footer-logo_v.svg" alt="logo">
+                <ul class="sublist">
+                    <li><a href="https://www.alisdijital.com/cerez-politikasi/">Çerez Politikası</a></li>
+                    <li><a href="https://www.alisdijital.com/kullanim-kosullari/">Kullanım Koşulları</a></li>
+                    <li><a href="https://www.alisdijital.com/gizlilik-politikasi/">Gizlilik Politikası</a></li>
+                    <li><a href="https://www.alisdijital.com/projelerimiz/">Projelerimiz</a></li>
+                    <li><a href="https://www.alisdijital.com/iletisim/">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="links">
+                <a href="https://www.facebook.com/alisdijital">
+                    <ion-icon name="logo-facebook" class="icon"></ion-icon>
+                </a>
+                <a href="https://www.instagram.com/alisdijital/">
+                    <ion-icon name="logo-instagram" class="icon"></ion-icon>
+                </a>
+                <a href="https://www.linkedin.com/company/alisdijital/">
+                    <ion-icon name="logo-linkedin" class="icon"></ion-icon>
+                </a>
+            </div>
+            <p class="subtext">Alis Dijital E-Ticaret Danışmanlık ve Reklam Ajansı ile işinizi büyütün!  <a href="https://www.alisdijital.com/iletisim/" class="contact">Bize Ulaşın</a></p>
+            <p class="rights">Tüm Hakları Saklıdır. 
+                2023 | Alis Dijital © Katkılarıyla Hazırlanmıştır.</p>
+        </footer>
+        <button onclick="topFunction()" id="gotopBtn" title="Go to top"><ion-icon name="arrow-up-outline"></ion-icon></button>
+    </div>
+
+    
+    <script src="app.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
