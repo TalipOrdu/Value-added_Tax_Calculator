@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>KDV Hesaplama Aracı</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://img.lovepik.com/free-png/20210926/lovepik-calculator-icon-free-vector-illustration-material-png-image_401495032_wh1200.png" type="icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            background-image: url(background.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .card{
+            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        }
+    </style>
+</head>
+
+<body >
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6" style="height: 500px; width: 500px;">
+                <div class="card" >
+                    <div class="card-header bg-primary text-white text-center">
+                        <h3>KDV Hesaplama Aracı</h3>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="tutar_secimi">Tutar Seçimi:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tutar_secimi" id="kdv_dahil"
+                                        value="1" checked>
+                                    <label class="form-check-label" for="kdv_dahil">
+                                        KDV Dahil Tutardan KDV Hariç Tutar Hesapla
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tutar_secimi" id="kdv_haric"
+                                        value="2">
+                                    <label class="form-check-label" for="kdv_haric">
+                                        KDV Hariç Tutardan KDV Dahil Tutar Hesapla
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="fiyat">Fiyat:</label>
+                                <input type="number" class="form-control" id="fiyat" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="kdv_orani">KDV Oranı:</label>
+                                <div class="btn-toolbar mb-3 " role="toolbar" aria-label="Toolbar with button groups">
+                                    <div class="btn-group mr-2 row pl-3" role="group" aria-label="First group"
+                                        class="form-control" id="kdv_orani">
+                                        <button id="button1" type="button" name="rate"
+                                            class="p-2 btn btn-secondary row-sm myButton" value="0.01">%1</button>
+                                        <button id="button2" type="button" name="rate"
+                                            class="btn btn-secondary row-sm myButton" value="0.08">%8</button>
+                                        <button id="button3" type="button" name="rate"
+                                            class="btn btn-secondary row-sm myButton" value="0.18">%18</button>
+                                        <input id="inputValue" type="number"
+                                            class="btn btn-secondary input-group-text rounded" min="0" max="100"
+                                            placeholder="Diğer"></input>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="button" class="btn btn-success btn-block p-1"
+                                    onclick="hesapla()"><h3>Hesapla</h3></button>
+                            </div>
+                        </form>
+                        <div id="sonuc" class="mt-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="kdv.js"></script>
+</body>
+
+</html>
